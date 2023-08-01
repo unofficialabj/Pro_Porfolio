@@ -1,6 +1,5 @@
-import { Box, Flex, Text, Textarea } from "@chakra-ui/react";
+import {  Flex } from "@chakra-ui/react";
 import React from "react";
-import { motion } from "framer-motion";
 
 const Preloader = () => {
   return (
@@ -16,7 +15,6 @@ const Preloader = () => {
         gap={5}
       >
         <div class="progress"></div>
-        {/* <Text>Loading...</Text> */}
       </Flex>
     </>
   );
