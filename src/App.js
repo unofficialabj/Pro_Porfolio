@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import ParticleBackground from "./Component/ParticleBackground";
+import Main from "./Pages/Main";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Personal from "./Pages/Personal";
+import Professional from "./Pages/Professional";
+import Preloader from "./Component/Preloader";
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(!loading);
+    }, 1800);
+    console.log("asnih");
+  }, []);
+  console.log(loading);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ParticleBackground />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main loading={loading} />} />
+          <Route path="/personal" element={<Personal />} />
+          <Route path="/professional" element={<Professional />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;

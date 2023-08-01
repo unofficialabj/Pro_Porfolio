@@ -26,6 +26,34 @@
     -->
     <title>React App</title>
   </head>
+  <style>
+    
+    .progress {
+       width: 300.4px;
+       height: 20.6px;
+       border-radius: 22.4px;
+       color: #90edb3;
+       border: 2.2px solid;
+       position: relative;
+    }
+    
+    .progress::before {
+       content: "";
+       position: absolute;
+       margin: 2.2px;
+       inset: 0 100% 0 0;
+       border-radius: inherit;
+       background: currentColor;
+       animation: progress-pf82op 2s infinite;
+    }
+    
+    @keyframes progress-pf82op {
+       100% {
+          inset: 0;
+       }
+    }
+
+    </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
