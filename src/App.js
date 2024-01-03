@@ -12,9 +12,8 @@ const App = () => {
     setTimeout(() => {
       setLoading(!loading);
     }, 1800);
-    console.log("asnih");
-  }, []);
-  console.log(loading);
+  }, [loading]);
+
   return (
     <>
       <ParticleBackground />
