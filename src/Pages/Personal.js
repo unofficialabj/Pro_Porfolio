@@ -1,9 +1,12 @@
-import React from 'react'
+import { Text } from "@chakra-ui/react";
+import React from "react";
 
 const Personal = () => {
   return (
-    <div>Personal</div>
-  )
-}
+    <>
+      <Text color={"whiteAlpha.400"}>Anish Bhakta Joshi</Text>
+    </>
+  );
+};
 
-export default Personal
+export default Personal;

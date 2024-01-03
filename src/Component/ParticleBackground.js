@@ -54,9 +54,9 @@ const ParticleBackground = () => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 1000,
             },
-            value: 80,
+            value: 50,
           },
           opacity: {
             animation: {

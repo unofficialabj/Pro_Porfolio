@@ -4,7 +4,6 @@ import Main from "./Pages/Main";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Personal from "./Pages/Personal";
 import Professional from "./Pages/Professional";
-import Preloader from "./Component/Preloader";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
