@@ -1,40 +1,51 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaBehance,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Social = () => {
   return (
     <>
-      <Box
-        position={{ xl: "fixed" }}
-        bottom={5}
-        display={{ base: "none", lg: "block" }}
-      >
-        <Flex justifyContent={"center"} alignItems={"baseline"} gap={4} m={4}>
-          <a href="https://www.facebook.com/unofficial.abj">
-            <FaFacebook fontSize={22} className="hoverable-icon" />
-          </a>
-          <a href="https://www.facebook.com/unofficial.abj">
-            <FaInstagram className="hoverable-icon" fontSize={22} />
-          </a>
-
-          <a href="https://www.facebook.com/unofficial.abj">
-            <FaLinkedin className="hoverable-icon" fontSize={22} />
-          </a>
-          <a href="https://www.facebook.com/unofficial.abj">
-            <FaGithub className="hoverable-icon" fontSize={22} />
-          </a>
-        </Flex>
-
-        <Text
-          color={"gray.300"}
-          align={"center"}
-          fontSize={14}
-          fontWeight={"thin"}
+      <Center>
+        <Box
+          position={{ xl: "fixed", lg: "fixed" }}
+          bottom={5}
+          display={{ base: "none", lg: "block" }}
         >
-          Copyright@2023 | Anish Bhakta Joshi
-        </Text>
-      </Box>
+          <Flex justifyContent={"center"} alignItems={"baseline"} gap={4} m={4}>
+            <Link to="https://www.facebook.com/unofficial.abj" target="_blank">
+              <FaFacebook fontSize={22} className="hoverable-icon" />
+            </Link>
+
+            <Link to="https://www.instagram.com/unofficial.abj" target="_blank">
+              <FaInstagram className="hoverable-icon" fontSize={22} />
+            </Link>
+
+            <Link
+              to="https://www.linkedin.com/in/unofficialabj"
+              target="_blank"
+            >
+              <FaLinkedin className="hoverable-icon" fontSize={22} />
+            </Link>
+            <Link to="https://www.facebook.com/unofficial.abj" target="_blank">
+              <FaGithub className="hoverable-icon" fontSize={22} />
+            </Link>
+            <Link to="https://www.behance.net/unofficial_abj" target="_blank">
+              <FaBehance className="hoverable-icon" fontSize={22} />
+            </Link>
+          </Flex>
+
+          <Text color={"gray.300"} align={"center"} fontSize={16}>
+            Copyright@{new Date().getFullYear()} | Anish Bhakta Joshi
+          </Text>
+        </Box>
+      </Center>
     </>
   );
 };
