@@ -42,7 +42,9 @@ const Social = () => {
           </Flex>
 
           <Text color={"gray.300"} align={"center"} fontSize={16}>
-            Copyright@{new Date().getFullYear()} | Anish Bhakta Joshi
+            <Link to={"/explore"}>
+              Copyright@{new Date().getFullYear()} | Anish Bhakta Joshi
+            </Link>
           </Text>
         </Box>
       </Center>
