@@ -16,7 +16,7 @@ const Social = () => {
         <Box
           position={{ xl: "fixed", lg: "fixed" }}
           bottom={5}
-          display={{ base: "none", lg: "block" }}
+          display={{ base: "block", lg: "block" }}
         >
           <Flex justifyContent={"center"} alignItems={"baseline"} gap={4} m={4}>
             <Link to="https://www.facebook.com/unofficial.abj" target="_blank">

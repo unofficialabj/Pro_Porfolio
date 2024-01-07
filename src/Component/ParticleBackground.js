@@ -20,7 +20,7 @@ const ParticleBackground = () => {
       options={{
         fpsLimit: 120,
         background: {
-          color: "rgb(0,0,20)",
+          color: "0e0e0e",
         },
         fullScreen: {
           enable: true,
